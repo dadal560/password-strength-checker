@@ -1,11 +1,37 @@
-def mdp():
-    mdp = input("Please enter the MDP value: ")
-    while not mdp:
-        print("No MDP value provided. Please try again.")
-        mdp = input("Please enter the MDP value: ")
-    return mdp
+import re
 
 
+def ask_password():
+    password = input("Please enter a password: ")
+
+    while not password or len(password) < 8:
+        if not password:
+            print("Error: password cannot be empty.")
+        elif len(password) < 8:
+            print("Error: password must be at least 8 characters long.")
+        password = input("Please enter a password: ")
+
+    return password
+
+def check_character_types(password):
+    recommendations = []
+    SPECIAL_CHARS = r"!@#$%^&*(),.?\":{}|<>"
+    if not re.search(r"[a-z]", password):
+        recommendations.append("Include at least one lowercase letter.")
+    if not re.search(r"[A-Z]", password):
+        recommendations.append("Include at least one uppercase letter.")
+    if not re.search(r"[0-9]", password):
+        recommendations.append("Include at least one digit.")
+    if not re.search(f"[{re.escape(SPECIAL_CHARS)}]", password):
+        recommendations.append("Include at least one special character.")
+    if recommendations:
+        print("Recommendations to improve your password:")
+        for recommendation in recommendations:
+            print(f"- {recommendation}")
+    else:        
+        print("Your password meets all character type requirements.")
+        
 if __name__ == "__main__":
-    result = mdp()
-    print(f"Mot de passe saisi : {result}")
+    result = ask_password()
+    check_character_types(result)
+    print(f"Password : {result}")
