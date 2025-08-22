@@ -186,6 +186,8 @@ Ce projet est distribué sous licence MIT. Voir le fichier LICENSE pour plus d'i
 **Contact :**
 * Email : [gwen.henry56@gmail.com]
 * GitHub : [@dadal560](https://github.com/dadal560)
+* ⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile !
+
 
 ## **Liens utiles**
 * [Documentation Python Re](https://docs.python.org/3/library/re.html)
@@ -201,14 +203,3 @@ Ce projet est distribué sous licence MIT. Voir le fichier LICENSE pour plus d'i
 * Suite de tests intégrée
 * Documentation complète
 * Support multi-plateforme
-
-## **Contribution**
-Les contributions sont les bienvenues ! Pour contribuer :
-
-1. **Fork** le projet
-2. **Créer** une branche feature (`git checkout -b feature/amelioration`)
-3. **Commiter** les changements (`git commit -am 'Ajout nouvelle fonctionnalité'`)
-4. **Push** vers la branche (`git push origin feature/amelioration`)
-5. **Ouvrir** une Pull Request
-
-**Rappel important** : Utilisez cet outil pour renforcer votre sécurité numérique et éduquer sur les bonnes pratiques de cybersécurité.
