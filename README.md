@@ -3,52 +3,52 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Un outil open-source **à but éducatif et pratique**, démontrant les bonnes pratiques de validation de mots de passe et de sécurité informatique.
+An open-source tool for **educational and practical purposes**, demonstrating password validation best practices and cybersecurity fundamentals.
 
-## **Avertissement sécuritaire**
-**IMPORTANT** : Ce projet est conçu pour **l'apprentissage et l'amélioration de la sécurité**.
-**Bonnes pratiques :**
-* **Utilisez toujours** des mots de passe forts et uniques
-* **Ne réutilisez jamais** vos mots de passe sur plusieurs services
-* **Activez systématiquement** l'authentification à deux facteurs (2FA)
-* **Utilisez un gestionnaire de mots de passe** professionnel
-**L'auteur encourage** l'utilisation responsable de cet outil pour améliorer votre sécurité numérique.
+## **Security Advisory**
+**IMPORTANT**: This project is designed for **learning and security improvement**.
+**Best practices:**
+* **Always use** strong and unique passwords
+* **Never reuse** passwords across multiple services
+* **Always enable** two-factor authentication (2FA)
+* **Use a professional** password manager
+**The author encourages** responsible use of this tool to improve your digital security.
 
-## **Fonctionnement technique**
-Le vérificateur utilise les expressions régulières Python pour :
-* Analyser la composition des mots de passe en temps réel
-* Évaluer la diversité des caractères utilisés
-* Fournir des recommandations personnalisées
-* Calculer un score de sécurité objectif
+## **Technical Overview**
+The checker uses Python regular expressions to:
+* Analyze password composition in real-time
+* Evaluate character diversity
+* Provide personalized recommendations
+* Calculate an objective security score
 
-## **Structure du projet**
+## **Project Structure**
 
 ```
 password-checker/
 │
-├── password_checker.py     # Module principal
-├── test_password_checker.py # Suite de tests
-├── requirements.txt        # Dépendances (aucune externe)
+├── password_checker.py     # Main module
+├── test_password_checker.py # Test suite
+├── requirements.txt        # Dependencies (none external)
 ├── .gitignore
 ├── LICENSE
 └── README.md
 ```
 
-## **Installation et utilisation**
+## **Installation and Usage**
 
-### **1. Prérequis**
-* Python 3.6 ou supérieur
-* Aucune dépendance externe requise
-* Compatible Linux, Windows, macOS
+### **1. Prerequisites**
+* Python 3.6 or higher
+* No external dependencies required
+* Compatible with Linux, Windows, macOS
 
-### **2. Cloner le dépôt**
+### **2. Clone the repository**
 
 ```bash
 git clone https://github.com/dadal560/password-checker.git
 cd password-checker
 ```
 
-### **3. Créer un environnement virtuel (optionnel)**
+### **3. Create a virtual environment (optional)**
 
 ```bash
 # Linux/macOS
@@ -60,22 +60,22 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-### **4. Lancer le vérificateur**
+### **4. Run the checker**
 
 ```bash
 python password_checker.py
 ```
 
-### **5. Utilisation programmatique**
+### **5. Programmatic usage**
 
 ```python
 from password_checker import check_character_types
 
-# Analyser un mot de passe
-check_character_types("MonMotDePasse123!")
+# Analyze a password
+check_character_types("MyPassword123!")
 ```
 
-## **Création d'un exécutable**
+## **Creating an Executable**
 
 ### **Windows (.exe)**
 
@@ -84,82 +84,82 @@ pip install pyinstaller
 pyinstaller --onefile password_checker.py
 ```
 
-### **Linux (binaire)**
+### **Linux (binary)**
 
 ```bash
 pip install pyinstaller
 pyinstaller --onefile password_checker.py
 ```
 
-L'exécutable sera généré dans le dossier `dist/`.
+The executable will be generated in the `dist/` folder.
 
-## **Fonctionnalités**
+## **Features**
 
-### **Fonctionnalités actuelles :**
-* Validation de longueur minimale (8 caractères)
-* Analyse des types de caractères (minuscules, majuscules, chiffres, spéciaux)
-* Système de notation sur 4 points
-* Recommandations personnalisées
-* Interface interactive en ligne de commande
-* Suite de tests complète avec pytest
+### **Current features:**
+* Minimum length validation (8 characters)
+* Character type analysis (lowercase, uppercase, digits, special characters)
+* 4-point scoring system
+* Personalized recommendations
+* Interactive command-line interface
+* Complete test suite with pytest
 
-### **Fonctionnalités prévues :**
-* Interface graphique moderne
-* Détection de mots de passe courants
-* Analyse de l'entropie
-* Intégration API Have I Been Pwned
-* Export des rapports de sécurité
+### **Planned features:**
+* Modern graphical interface
+* Common password detection
+* Entropy analysis
+* Have I Been Pwned API integration
+* Security report export
 
-## **Critères de sécurité**
+## **Security Criteria**
 
-### **Exigences obligatoires :**
-* **Longueur** : Minimum 8 caractères (recommandé : 12+)
-* **Minuscules** : Au moins une lettre (a-z)
-* **Majuscules** : Au moins une lettre (A-Z)
-* **Chiffres** : Au moins un nombre (0-9)
-* **Caractères spéciaux** : Au moins un symbole `!@#$%^&*(),.?":{}|<>`
+### **Required criteria:**
+* **Length**: Minimum 8 characters (recommended: 12+)
+* **Lowercase**: At least one letter (a-z)
+* **Uppercase**: At least one letter (A-Z)
+* **Digits**: At least one number (0-9)
+* **Special characters**: At least one symbol `!@#$%^&*(),.?":{}|<>`
 
-### **Échelle de notation :**
-* **Fort (4/4)** : Répond à tous les critères - Sécurité optimale
-* **Moyen (2-3/4)** : Quelques améliorations nécessaires
-* **Faible (0-1/4)** : Vulnérabilités critiques détectées
+### **Rating scale:**
+* **Strong (4/4)**: Meets all criteria - Optimal security
+* **Medium (2-3/4)**: Some improvements needed
+* **Weak (0-1/4)**: Critical vulnerabilities detected
 
-## **Tests et qualité**
+## **Testing and Quality**
 
-### **Lancer les tests**
+### **Run tests**
 
 ```bash
-# Installation de pytest (si nécessaire)
+# Install pytest (if needed)
 pip install pytest
 
-# Exécution des tests
+# Run tests
 pytest test_password_checker.py -v
 ```
 
-### **Couverture des tests :**
-* Validation des mots de passe forts
-* Détection des faiblesses spécifiques
-* Vérification des messages de sortie
-* Tests de cas limites
+### **Test coverage:**
+* Strong password validation
+* Specific weakness detection
+* Output message verification
+* Edge case testing
 
-## **Aspects sécuritaires**
+## **Security Aspects**
 
-### **Sécurité de l'outil :**
-* **Aucun stockage** : Les mots de passe ne sont jamais sauvegardés
-* **Traitement local** : Aucune transmission réseau
-* **Code ouvert** : Audit de sécurité possible
-* **Pas de logging** : Aucune trace des mots de passe testés
+### **Tool security:**
+* **No storage**: Passwords are never saved
+* **Local processing**: No network transmission
+* **Open source**: Security audit possible
+* **No logging**: No trace of tested passwords
 
-### **Protection contre les attaques :**
-1. **Mots de passe complexes** générés aléatoirement
-2. **Gestionnaire de mots de passe** professionnel
-3. **Authentification multi-facteurs** (2FA/MFA)
-4. **Rotation régulière** des mots de passe critiques
-5. **Surveillance des violations** de données
+### **Attack protection:**
+1. **Complex passwords** randomly generated
+2. **Professional password manager**
+3. **Multi-factor authentication** (2FA/MFA)
+4. **Regular rotation** of critical passwords
+5. **Data breach monitoring**
 
-## **Exemples d'utilisation**
+## **Usage Examples**
 
-### **Mot de passe faible :**
+### **Weak password:**
 ```
 Please enter a password: 123456
 Score: 1/4
@@ -170,7 +170,7 @@ Recommendations to improve your password:
 - Include at least one special character.
 ```
 
-### **Mot de passe fort :**
+### **Strong password:**
 ```
 Please enter a password: MyS3cur3P@ssw0rd!
 Score: 4/4
@@ -178,28 +178,30 @@ Password strength: Strong
 Your password meets all character type requirements.
 ```
 
-## **Licence**
-Ce projet est distribué sous licence MIT. Voir le fichier LICENSE pour plus d'informations.
+## **License**
+This project is distributed under the MIT License. See the LICENSE file for more information.
 
-## **Auteur**
+## **Author**
 **@dadal560**
-**Contact :**
-* Email : [gwen.henry56@gmail.com]
-* GitHub : [@dadal560](https://github.com/dadal560)
+**Contact:**
+* Email: [gwen.henry56@gmail.com]
+* GitHub: [@dadal560](https://github.com/dadal560)
 
-## **Liens utiles**
-* [Documentation Python Re](https://docs.python.org/3/library/re.html)
+## **Useful Links**
+* [Python Re Documentation](https://docs.python.org/3/library/re.html)
 * [OWASP Password Guidelines](https://owasp.org/www-project-authentication-cheat-sheet/)
 * [NIST Password Guidelines](https://pages.nist.gov/800-63-3/)
 * [Cybersecurity Best Practices](https://www.cisa.gov/cybersecurity-best-practices)
 
 ## **Changelog**
 
-### **Version 1.0.0 (2024-12-XX)**
-* Première version fonctionnelle
-* Validation complète des critères de sécurité
-* Suite de tests intégrée
-* Documentation complète
-* Support multi-plateforme
+### **Version 1.0.0 (2025-08-22)**
+* First functional version
+* Complete security criteria validation
+* Integrated test suite
+* Complete documentation
+* Multi-platform support
 
-### ⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile ! 
+**Important reminder**: Use this tool to strengthen your digital security and educate on cybersecurity best practices.
+
+### ⭐ If this project was useful to you, don't hesitate to give it a star!
