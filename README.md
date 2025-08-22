@@ -186,8 +186,6 @@ Ce projet est distribué sous licence MIT. Voir le fichier LICENSE pour plus d'i
 **Contact :**
 * Email : [gwen.henry56@gmail.com]
 * GitHub : [@dadal560](https://github.com/dadal560)
-* ⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile !
-
 
 ## **Liens utiles**
 * [Documentation Python Re](https://docs.python.org/3/library/re.html)
@@ -203,3 +201,5 @@ Ce projet est distribué sous licence MIT. Voir le fichier LICENSE pour plus d'i
 * Suite de tests intégrée
 * Documentation complète
 * Support multi-plateforme
+
+### ⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile ! 
