@@ -1,4 +1,3 @@
-import pytest
 from password_checker import check_character_types
 
 def test_strong_password(capsys):

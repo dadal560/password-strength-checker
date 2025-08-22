@@ -1,6 +1,5 @@
 import re
 
-
 def ask_password():
     password = input("Please enter a password: ")
 
@@ -15,15 +14,28 @@ def ask_password():
 
 def check_character_types(password):
     recommendations = []
+    score = 4
     SPECIAL_CHARS = r"!@#$%^&*(),.?\":{}|<>"
     if not re.search(r"[a-z]", password):
+        score -= 1
         recommendations.append("Include at least one lowercase letter.")
     if not re.search(r"[A-Z]", password):
+        score -= 1
         recommendations.append("Include at least one uppercase letter.")
     if not re.search(r"[0-9]", password):
+        score -= 1
         recommendations.append("Include at least one digit.")
     if not re.search(f"[{re.escape(SPECIAL_CHARS)}]", password):
+        score -= 1
         recommendations.append("Include at least one special character.")
+    print(f"Score: {score}/4")
+    if score == 4:
+        print("Password strength: Strong")
+    elif score >= 2:
+        print("Password strength: Medium")
+    else:
+        print("Password strength: Weak")
+        
     if recommendations:
         print("Recommendations to improve your password:")
         for recommendation in recommendations:
